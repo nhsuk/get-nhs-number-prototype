@@ -1,0 +1,88 @@
+{% set pageTitle = "Which of the following best describes you?" %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+{% set version = "v1" %}
+
+{% extends "includes/layout.html" %}
+
+{% block backLink %}
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="/{{version}}/what-is-your-dob">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back
+  </a>
+</div>
+{% endblock %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <form method="post" action="/{{version}}/what-is-your-postcode">
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="describe-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              {{ pageTitle }}
+            </h1>
+          </legend>
+
+          <div class="nhsuk-hint" id="describe-hint">
+            <p class="nhsuk-hint">We are asking for this information to help us match you against your GP record.</p>
+            <p class="nhsuk-hint">You can select any of these options and we should be able to match your records accurately.</p>
+          </div>
+
+          <div class="nhsuk-form-group">
+
+            <div class="nhsuk-radios">
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="describe-you-1" name="describe-you" type="radio" value="Female" {{ checked("describe-you", "Female") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="describe-you-1">
+                  Female
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="describe-you-2" name="describe-you" type="radio" value="Male" {{ checked("describe-you", "Male") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="describe-you-2">
+                  Male
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="describe-you-3" name="describe-you" type="radio" value="Non-binary" {{ checked("describe-you", "Non-binary") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="describe-you-3">
+                  Non-binary
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="describe-you-4" name="describe-you" type="radio" value="Prefer not to say" {{ checked("describe-you", "Prefer not to say") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="describe-you-4">
+                  Prefer not to say
+                </label>
+              </div>
+
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="describe-you-5" name="describe-you" type="radio" value="How I self-describe may not match my GP record" {{ checked("describe-you", "How I self-describe may not match my GP record") }}>
+                <label class="nhsuk-label nhsuk-radios__label" for="describe-you-5">
+                  How I self-describe may not match my GP record
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+        </fieldset>
+
+        <button class="nhsuk-button" type="submit">
+          Continue
+        </button>
+    
+      </form>
+    
+    </div>
+  </div>
+{% endblock %}
