@@ -1,0 +1,23 @@
+{% set pageTitle = "We cannot find your details" %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+{% set version = "v1" %}
+
+{% extends "includes/layout.html" %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>{{pageTitle}}</p>
+      <p>We are unable to find any details matching the information you have provided.</p>
+      <p>Please check that you have entered your details correctly.</p>
+      <p>We may be unable to find your details because:</p>
+      <ul>
+        <li>you have moved to another address but you have not let your GP surgery know.</li>
+        <li>you have changed your surname from the surname you registered with your GP's practice.</li>
+      </ul>
+      <p>If you think this may be the case you should contact your GP for advice.</p>
+      <p>For further advice you please contact the call centre on 119</p>
+    </div>
+  </div>
+{% endblock %}
