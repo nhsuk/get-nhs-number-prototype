@@ -13,7 +13,6 @@
     Go back
   </a>
 </div>
-<p>These are the contact details we’ve found with your GP surgery.</p>
 {% endblock %}
 
 {% block content %}
@@ -28,6 +27,7 @@
               {{ pageTitle }}
             </h1>
           </legend>
+          <p>These are the contact details we’ve found with your GP surgery.</p>
 
           <div class="nhsuk-form-group">
 
@@ -47,12 +47,7 @@
                 </label>
               </div>
 
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="nhs-number-match-3" name="nhs-number-match" type="radio" value="By letter" {{ checked("nhs-number-match", "By letter") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="nhs-number-match-3">
-                  By letter to LS17 ***
-                </label>
-              </div>
+         
               
             </div>
           </div>
