@@ -1,6 +1,6 @@
-{% set pageTitle = "We cannot find your contact details" %}
+{% set pageTitle = "We cannot find your NHS number" %}
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
-{% set version = "fail-nhsn" %}
+{% set version = "cd" %}
 
 {% extends "includes/layout.html" %}
 
@@ -9,10 +9,11 @@
     <div class="nhsuk-grid-column-two-thirds">
 
       <h1>{{pageTitle}}</h1>
-      <p><p>Please contact your GP surgery to get your NHS number. If you're not sure what your GP surgery is, you can <a href="https://www.nhs.uk/service-search/find-a-GP">find a GP</a> here.</p></p>
-      <p> You can also get your NHS number by using the <a href="https://www.nhsapp.service.nhs.uk/login">NHS App</a>.
+      <p>This is because the details you entered do not match your GP records.</p>
 
-         <div class="nhsuk-warning-callout">
+      <p><a href="/v1">Try again</a> or contact your GP surgery to get your NHS number. If you're not sure what your GP surgery is, you can <a href="https://www.nhs.uk/service-search/find-a-GP">find a GP</a> here.</p>
+
+      <div class="nhsuk-warning-callout">
         <h3 class="nhsuk-warning-callout__label">
           <span role="text">
             Important
