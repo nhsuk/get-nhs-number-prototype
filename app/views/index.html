@@ -11,17 +11,12 @@
 {% block content %}
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-    
-      <h1>
-        {{serviceName}} prototypes
-      </h1>
+
+      <h1>{{serviceName}} prototypes</h1>
 
       <hr>
 
-      <h2>
-        Version 1
-      </h2>
-
+      <h2>Version 1</h2>
       <ul>
         <li>
           <a href="/v1">{{serviceName}}</a>
@@ -30,6 +25,14 @@
             <li><a href="/v1/we-cannot-find-your-contact-details">We cannot find your contact details</a></li>
             <li><a href="/v1/confirmation-page">Your NHS number has been sent to you</a></li>
           </ul>
+        </li>
+      </ul>
+
+
+      <h2>Failure journeys</h2>
+      <ul>
+        <li>
+          <a href="/fail-cd">We cannot find your contact details</a>
         </li>
       </ul>
 

@@ -1,0 +1,28 @@
+{% set pageTitle = "We cannot find your NHS number" %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+{% set version = "fail-cd" %}
+
+{% extends "includes/layout.html" %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>{{pageTitle}}</h1>
+      <p>This is because the details you entered do not match your GP records.</p>
+
+      <p><a href="/v1">Try again</a> or contact your GP surgery to get your NHS number. If you're not sure what your GP surgery is, you can <a href="https://www.nhs.uk/service-search/find-a-GP">find a GP</a> here.</p>
+
+      <div class="nhsuk-warning-callout">
+        <h3 class="nhsuk-warning-callout__label">
+          <span role="text">
+            Important
+          </span>
+        </h3>
+        <p>You do not need your NHS number to use NHS services.</p>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
