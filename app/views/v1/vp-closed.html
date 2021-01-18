@@ -1,0 +1,21 @@
+{% set pageTitle = "This service is currently unavailable" %}
+{% set mainClasses = "nhsuk-main-wrapper--s" %}
+{% set version = "v1" %}
+
+{% extends "includes/layout.html" %}
+
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>{{pageTitle}}</h1>
+
+      <p>You cannot book coronavirus vaccination appointments at this time.</p>
+      <p>Do not try refreshing or calling the helpline as you cannot book an appointment this way.</p>
+      <p>This service is currently only for people who have received a letter inviting them to book their vaccination appointments.</p>
+      <p>If you are eligible to use this service, try again later.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
