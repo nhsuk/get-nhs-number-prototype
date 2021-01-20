@@ -1,6 +1,6 @@
 {% set pageTitle = "Where should we send your NHS number?" %}
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
-{% set version = "v1" %}
+{% set version = "no-letter" %}
 
 {% extends "includes/layout.html" %}
 
@@ -50,13 +50,7 @@
                 </label>
               </div>
 
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="nhs-number-match-3" name="nhs-number-match" type="radio" value="By letter" {{ checked("nhs-number-match", "By letter") }}>
-                <label class="nhsuk-label nhsuk-radios__label" for="nhs-number-match-3">
-                  By letter to RH16 8NB
-                </label>
-              </div>
-
+         
             </div>
           </div>
 

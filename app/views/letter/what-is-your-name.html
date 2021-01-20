@@ -1,12 +1,12 @@
-{% set pageTitle = "What is your home postcode?" %}
+{% set pageTitle = "What is your name?" %}
 {% set mainClasses = "nhsuk-main-wrapper--s" %}
-{% set version = "v2" %}
+{% set version = "letter" %}
 
 {% extends "includes/layout.html" %}
 
 {% block backLink %}
 <div class="nhsuk-back-link">
-  <a class="nhsuk-back-link__link" href="/{{version}}/what-is-your-dob">
+  <a class="nhsuk-back-link__link" href="/{{version}}">
     <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
     </svg>
@@ -20,7 +20,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-      <form action="/{{version}}/check-your-answers" method="post">
+      <form action="/{{version}}/what-is-your-dob" method="post">
 
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -28,15 +28,22 @@
               {{ pageTitle }}
             </h1>
           </legend>
-          <div class="nhsuk-hint" id="address-hint">
-            You must enter the home postcode you registered with your GP surgery. For example EN1 1BE.
+          <div class="nhsuk-hint" id="name-hint">
+            You must enter the names you registered with your GP surgery.
           </div>
 
           <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="address-postcode">
-              Postcode
+            <label class="nhsuk-label" for="first-name">
+              First name
             </label>
-            <input class="nhsuk-input nhsuk-input--width-10" id="address-postcode" name="address-postcode" type="text" autocomplete="postal-code" aria-describedby="address-hint" value="{{ data['address-postcode'] }}">
+            <input class="nhsuk-input" id="first-name" name="first-name" type="text" value="{{ data['first-name'] }}" aria-describedby="name-hint">
+          </div>
+
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="last-name">
+              Last name
+            </label>
+            <input class="nhsuk-input" id="last-name" name="last-name" type="text" value="{{ data['last-name'] }}" aria-describedby="name-hint">
           </div>
 
         </fieldset>
@@ -47,6 +54,6 @@
 
       </form>
 
-    </div>
+    </div>  
   </div>
 {% endblock %}
